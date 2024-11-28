@@ -8,12 +8,12 @@ from datetime import datetime
 from typing import List, Tuple, Optional
 
 # Telegram Bot 的 Token
-TOKEN = '7534870081:AAHfFKekXFGbCITHe4_1kvwSMW9wq9ETmQU'
+TOKEN = '---Use Youself TOKEN---'
 bot = telebot.TeleBot(TOKEN)
 
 # 初始化完成後發送消息到群組
 init_message = 'init--- 初始化完成'
-bot.send_message("6684202124", init_message)
+bot.send_message("---Use Youself ID---", init_message)
 print("訊息已發送！", init_message)
 
 # 定義獲取K線資料的函數
@@ -147,8 +147,8 @@ if __name__ == '__main__':
     # 初始化 API 物件並登入
     api = sj.Shioaji()
     api.login(
-        api_key='Z5PLv8EuQZUtoWJm1PaMHfe9pL7CWoUD5xytRBiLtvW',
-        secret_key='9Q6Tc2gGXDBK1uHnkqCj6f5dQy1yFd9tdRXYVJVUUzZr',
+        api_key='---Use Youself api_key---',
+        secret_key='---Use Youself secret_key---',
         contracts_cb=lambda security_type: print(f"{repr(security_type)} fetch done.")
     )
     if api is None:
@@ -191,7 +191,7 @@ if __name__ == '__main__':
                         if '綠' in first_three_rows['漲跌'].values or all(first_three_rows['漲跌'] == '白'):
                             continue  # 如果前三筆有綠色，跳過此次股票處理
                         formatted_message = format_kbars_message_with_ticks(stock_code, kbars_df.head(5))
-                        send_message_to_terminal_and_telegram(bot, "6684202124", formatted_message)
+                        send_message_to_terminal_and_telegram(bot, "---Use Youself ID---", formatted_message)
 
                     queried_stocks.add(stock_code)
 
